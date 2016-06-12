@@ -40,9 +40,9 @@
 					$p = json_decode($p, true);
 					$p = array_reverse($p);
 					$p = array_chunk($p, 10);
-					foreach ($p[0] as $user)
+					foreach ($p[0] as $product)
 					{
-						print($user['pseudo']."<br>");
+						print($product['name']."<br>");
 					}
 
 				?>

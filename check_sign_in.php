@@ -42,4 +42,19 @@ function ctel($phone, $tab)
 		}
 	}
 }
+
+function cname($product, $tab)
+{
+	foreach ($tab as $name)
+	{
+		if($name['name'] === $product)
+		{
+			echo "That Pokemon is Already in sell"."<br/>";
+			redirect('products.php');
+			exit();
+		}
+	}
+}
+
+
 ?>

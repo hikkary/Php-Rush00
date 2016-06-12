@@ -1,13 +1,25 @@
 <?php
-//print($_POST['image']."<br/>");
+$rootname = getcwd();
+require_once($rootname.'/redirect.php');
+require_once($rootname.'/check_sign_in.php');
 
-foreach ($_FILES as $key => $value) {
-	echo $key."/".$value."<br>";
-}
-
-
-foreach ($_POST as $key => $value) {
-	echo $key."/".$value."<br>";
-}
-
+if($_POST['ref'] === "" | $_POST['name'] === "" | $_POST['price'] === "" | $_POST['image'] === "" | $_POST['description'] === "")
+	{
+		$error = "Veuillez remplir tout les champs";
+		echo '<script type="text/javascript">window.alert("'.$error.'");</script>';
+		redirect(products.php);
+		exit();
+	}
+	if(file_exists('json/products.json'))
+	{
+		$new_product =  array('ref' => $_POST[ref] , 'name' => $_POST[name],'price' => $_POST[price], 'image' => $_POST[image], 'type' => $_POST[type], 'description' => $_POST[description]);
+		$u = file_get_contents('json/products.json');
+		$u = json_decode($u, true);
+		cname($_POST[name], $u);
+		$u[] = $new_product;
+		$u =json_encode($u);
+		file_put_contents('json/products.json', $u);
+		redirect('products.php');
+	}
 ?>
+

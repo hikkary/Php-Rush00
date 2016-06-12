@@ -28,19 +28,18 @@
 				<input type="number" name="price" placeholder="Price">
 					<br/>
 
-			    <label for="type">Select Type :</label><br />
-				<select name="type" placeholder="Select The type">
-					  <option value="None">None</option>
-					  <option value="Fire">Fire</option>
-					  <option value="Water">Water</option>
-					  <option value="Rock">Rock</option>
-					  <option value="Poison">Poison</option>
+			    <label for="type">Select Types :</label><br />
+					  <input type="checkbox" value="ok"  name="None">None</input>
+					  <input type="checkbox" value="ok"  name="Fire">Fire</input>
+					  <input type="checkbox" value="ok"  name="Plant">Plant</input>
+					  <input type="checkbox" value="ok"  name="Water">Water</input>
+					  <input type="checkbox" value="ok" name="Rock">Rock</input>
+					  <input type="checkbox" value="ok"  name="Poison">Poison</input>
 				</select>
 				<br/>
 					<br/>
-			    <label for="image">Image ( max. 300 Ko) :</label><br />
-				<input type="hidden" name="MAX_FILE_SIZE" value="300000" />
-				<input type="file" name="image" id="image">
+
+				<input type="url" name="image" placeholder="url de l'image">
 
 				<input type="text" name="description" placeholder="Describe the product">
 				<input type="submit" name="submit" value="OK"/>

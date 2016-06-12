@@ -22,6 +22,20 @@
 	<a href="#">
 		<h1 class="poketitre">Nos Derniers Pokemon</h1>
 	</a>
+		<div class="affichage">
+		<?php
+			$p = file_get_contents('json/products.json');
+			$p = json_decode($p, true);
+			$p = array_reverse($p);
+			$p = array_chunk($p, 3);
+			foreach ($p[0] as $product)
+			{
+				echo "<img src='{$product['image']}'/>";
+				print($product['name']." &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ".$product['price']."$");
+			}
+
+		?>
+		</div>
 </div>
 
 

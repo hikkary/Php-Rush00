@@ -20,13 +20,6 @@ if($_POST['fname'] === "" | $_POST['lname'] === "" | $_POST['pseudo'] === "" | $
 		$u[] = $new_user;
 		$u =json_encode($u);
 		file_put_contents('json/users.json', $u);
+		redirect('index.php')
 	}
-
-
-	// else
-	// {
-	// 	echo '<script type="text/javascript">window.alert("'."Invincible !".'");</script>';
-	// 	exit();
-	// }
-
 ?>

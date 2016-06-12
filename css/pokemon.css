@@ -84,21 +84,25 @@ height: 900px;
 	width: 800px;
 	height: 400px;
 	background-color: #7CD8E4;
-	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 	box-shadow: 0 0 12px #999;
 }
 
 .poketitre{
+	text-align: center;
 	height: 40px;
 	color: white;
 	background-color: #009AE3;
 	box-shadow: 0 0 6px #999;
 }
 
-
-
+.affichage{
+	/* position: relative; */
+	display: flex;
+	width: 100px;
+	height: 200px;
+}
 
 
 
