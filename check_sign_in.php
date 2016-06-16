@@ -56,5 +56,19 @@ function cname($product, $tab)
 	}
 }
 
+function cprice($product)
+{
+	$tab = file_get_contents('json/products.json');
+	$tab = json_decode($tab, true);
+
+	foreach ($tab as $name)
+	{
+		if($name['name'] === $product)
+		{
+			return $name['price'];
+		}
+	}
+}
+
 
 ?>

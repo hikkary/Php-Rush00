@@ -1,8 +1,10 @@
+/*------------------CSS Global------------------------*/
+
 body{
 background-image: url('http://e08595.medialib.glogster.com/media/04/0463cfaf4ce3325b2d16bb5f56a4b5466f0df66553198c13ab0245486e872fd3/tumblr-lhlcynrexb1qapgvbo1-500-jpg.jpg');
 }
 
-#content, #vitrine{
+#content, #form{
 	width: 800px;
 	margin-left: auto;
 	margin-right: auto;
@@ -28,10 +30,6 @@ background-image: url('http://e08595.medialib.glogster.com/media/04/0463cfaf4ce3
 	list-style-type: none;
 	padding-left: 0px;
 	text-decoration: none;
-}
-
-#admin{
-
 }
 
 #tmenu li.bout_g{
@@ -66,40 +64,34 @@ li.bout_d{
 	text-align: center;
 	border-left: 1px solid #fff;
 }
-/*------------------CSS Vitrine------------------------*/
+/*------------------CSS Form------------------------*/
 
-#vitrine{
-margin-top: 10px;
-margin-bottom: 10px;
-box-shadow: 0 0 10px #009AE3;
-width: 800px;
-height: 900px;
-}
 
-/*------------------CSS Poketop------------------------*/
-
-#poketop{
+#forme{
 	width: 800px;
-	height: 200px;
+	height: 500px;
 	background-color: #7CD8E4;
-	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 10px;
 	box-shadow: 0 0 12px #999;
 }
-
-#poketitre{
+#forme h1{
 	height: 40px;
-	color: white;
 	background-color: #009AE3;
-	box-shadow: 0 0 6px #999;
+	text-align: center;
 }
 
 
-
-
-
-
+input{
+/*	width: 796px;*/
+	/*margin-left: auto;
+	margin-right: auto;*/
+	display: block;
+	align-content: center;
+	margin-top: 17px;
+	margin-bottom: auto;
+}
 
 
 

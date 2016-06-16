@@ -8,7 +8,7 @@
 <?php
 	$rootname = getcwd();
 	require_once($rootname.'/nav/menu.php');
-  	tmenu();
+  	amenu();
 ?>
 
 	<div id="forme">

@@ -5,19 +5,11 @@
 	<title>Poke-Shop</title>
 </head>
 <body>
-	<div id="content">
-		<div id="tmenu">
-			<ul>
-			   <a href="admin.php"><li class="bout_g">Home</li></a>
-				<a href="products.php"><li class="bout_g">Add Products</li></a>
-				<a href="#"><li class="bout_g">Basket</li></a>
-				<a href="#"><li class="bout_g">Nos Pokemons</li></a>
-				<a href="#"><li class="bout_g">Nos Pokeballs</li></a>
-				<a href="#"><li class="bout_d">Inscription</li></a>
-				<a href="admin.php"><li id="admin" class="bout_d">Admin</li></a>
-			</ul>
-		</div>
-
+<?php
+	$rootname = getcwd();
+	require_once($rootname.'/nav/menu.php');
+  	amenu();
+?>
 	<div id="forme">
 		<h1>Bienvenue dans l'interface d'administration</h1>
 			<div id="users">

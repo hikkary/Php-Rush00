@@ -33,7 +33,7 @@ background-image: url('http://e08595.medialib.glogster.com/media/04/0463cfaf4ce3
 }
 
 #admin{
-	visibility: hidden;
+
 }
 
 #tmenu li.bout_g{
@@ -82,7 +82,7 @@ height: 900px;
 
 .poketop{
 	width: 800px;
-	height: 400px;
+	height: 300px;
 	background-color: #7CD8E4;
 	margin-left: auto;
 	margin-right: auto;

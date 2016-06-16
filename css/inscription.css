@@ -32,10 +32,6 @@ background-image: url('http://e08595.medialib.glogster.com/media/04/0463cfaf4ce3
 	text-decoration: none;
 }
 
-#admin{
-	visibility: hidden;
-}
-
 #tmenu li.bout_g{
 	display: block;
 	/*margin: 1px;*/
@@ -75,6 +71,8 @@ li.bout_d{
 	width: 800px;
 	height: 500px;
 	background-color: #7CD8E4;
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 10px;
 	box-shadow: 0 0 12px #999;
 }

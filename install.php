@@ -9,9 +9,8 @@
 	}
 	if (!file_exists('json/products.json'))
 	{
-		file_put_contents('json/products.json', NULL);
+		$products = file_get_contents('data/products.json');
+		file_put_contents('json/products.json', $products);
 		echo "Json products created\n";
 	}
-	// $v = file_get_contents('json/users.json');
-	// print_r(json_decode($v));
 ?>

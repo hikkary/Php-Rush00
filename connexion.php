@@ -13,12 +13,8 @@
 
 	<div id="forme">
 		<div id="dep">
-			<form action="create.php" method="post">
-				<input type="text" name="fname" placeholder="First Name">
-				<input type="text" name="lname" placeholder="Last Name">
+			<form action="connect.php" method="post">
 				<input type="text" name="pseudo" placeholder="Pseudo">
-				<input type="email" name="email" placeholder="E-mail">
-				<input type="tel" name="tel" placeholder="Mobile">
 				<input type="password" name="pwd" placeholder="Mot de passe">
 				<input type="submit" name="submit" value="OK"/>
 			</form>
