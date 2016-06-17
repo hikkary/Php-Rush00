@@ -34,10 +34,40 @@
 				echo "Poison ? : ".$p['Poison']."<br>";
 				echo "description : ".$p['description']."<br>";
 	echo '<div id="dep">
+	<br>
 			<form  action="mod.php" method="post">
-				<input class="radio" type="radio" name="ref" value="Pokemon"> Pokemon <br/>
-				<input class="radio" type="radio" name="ref" value="Pokeball"> Pokeball<br/>
-';
+			<label for="group">Add your product to a group :</label><br />
+			<SELECT  name="group" size="1">';
+			$u = file_get_contents('json/groups.json');
+			$u = json_decode($u, true);
+			$u = array_reverse($u);
+
+			foreach ($u as $user)
+			{
+				//echo "<img src='{$user['image']}'/>";
+				echo "<option>";
+				print($user['gname']);
+			}
+	echo '</SELECT>
+		<br>
+		';
+	echo'	<label for="remove">Remove your product from a group :</label><br />
+			<SELECT  name="remove" size="1">';
+			$u = file_get_contents('json/products.json');
+			$u = json_decode($u, true);
+			$u = array_reverse($u);
+			foreach ($u as $user)
+			{
+				echo "<option>";
+				while ($user['group']) {
+
+					foreach ($user['group'] as $user2)
+					{
+						print($user2);
+					}
+				}
+			}
+	echo '</SELECT>';
 
 echo"			<input type='text' name='name' value='{$p[name]}' placeholder='Name'>";
 echo"				<input type='text' name='newname' value='{$p[name]}' placeholder='New Name'>";
@@ -47,8 +77,8 @@ echo "			<input type='number' name='price' value='{$p[price]}' placeholder='Pric
 echo '			    <label for="type">Select Types :</label><br />
 					  <input type="checkbox" name="None">None</input>
 					  <input type="checkbox" name="Fire">Fire</input>
-					  <input type="checkbox" name="Plant">Plant</input>'
-					  <input type="checkbox" name="Water">Water</input>
+					  <input type="checkbox" name="Plant">Plant</input>';
+echo "					  <input type='checkbox' name='Water' checked='{$p[Water]}'>Water</input>";
 echo'					  <input type="checkbox" name="Rock">Rock</input>
 					  <input type="checkbox" name="Poison">Poison</input>
 				</select>

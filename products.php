@@ -12,11 +12,26 @@
 ?>
 
 	<div id="forme">
-		<div id="dep">
-			<form  action="product.php" method="post" >
-				<input class="radio" type="radio" name="ref" value="Pokemon"> Pokemon <br/>
-				<input class="radio" type="radio" name="ref" value="Pokeball"> Pokeball<br/>
+	<?php
+		echo '<div id="dep">
+	<br>
+			<form  action="product.php" method="post">
+			<label for="group">Add your product to a group :</label><br />
+			<SELECT  name="group" size="1">';
+			$u = file_get_contents('json/groups.json');
+			$u = json_decode($u, true);
+			$u = array_reverse($u);
 
+			foreach ($u as $user)
+			{
+				//echo "<img src='{$user['image']}'/>";
+				echo "<option>";
+				print($user['gname']);
+			}
+	echo '</SELECT>
+		<br>
+		';
+?>
 				<input type="text" name="name" placeholder="Name">
 				<input type="number" name="price" placeholder="Price">
 					<br/>
