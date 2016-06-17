@@ -21,18 +21,21 @@ session_start();
 				require_once($rootname."/check_sign_in.php");
 				require_once($rootname."/redirect.php");
 				$stock = array("");
-				$stock[0] = array("");
+				// $tmp = array("");
+
 					if (!$_SESSION['tab'])
 					{
-						echo "Le panier est vide";
+						echo "Le panier est vide"."<br>";
 					}
 					else
 					{
+						$i = 0;
 						foreach (array_combine($_SESSION['tab'], $_SESSION['qty']) as $poke => $qty )
 						{
 			 				echo $poke." ".$qty." ".cprice($poke) * $qty."$"."<br>";
-			 				$stock[0][] =  $poke." ".$qty." ".cprice($poke) * $qty."$"."<br>";
-			 				$stock = array_merge($stock, $stock[0]);
+			 				$tmp =  $poke." ".$qty." ".cprice($poke) * $qty."$"."<br>";
+			 				$stock[$i] = $tmp;
+			 				$i++;
 			 			}
 			 		}
 			 	if ($_SESSION['pseudo'] == "")
@@ -49,23 +52,18 @@ session_start();
 						</div>
 					</div>';
 				}
-				$i = 0;
-				// while($i <= count($stock))
-				// {
-				//  unset($stock[i]);
-				//  $i++;
-				// }
-				// unset($stock[1]);
-				// unset($stock[2]);
+
 
 		if ($_POST['Validate'] === "on")
 		{
 			$_SESSION['valid'] = $stock;
+			unset($stock);
 		}
 		if ($_POST['Supress'] === "on")
 		{
 			unset($_SESSION['tab']);
 			unset($_SESSION['qty']);
+			unset($stock);
 			redirect('panier.php');
 		}
 

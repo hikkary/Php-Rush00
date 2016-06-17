@@ -2,8 +2,7 @@
 <?php
 	if (!file_exists('json/users.json'))
 	{
-		$users[] =  array('fname' => Kerkeb , 'lname' => Zakaria,'pseudo' => admin, 'email' => 'z.kerkeb@gmail.com', 'pwd' => 123456);
-		$users = json_encode($users);
+		$users = file_get_contents('data/users.json');
 		file_put_contents('json/users.json',$users);
 		echo "Json users created\n";
 	}
@@ -12,5 +11,11 @@
 		$products = file_get_contents('data/products.json');
 		file_put_contents('json/products.json', $products);
 		echo "Json products created\n";
+	}
+	if (!file_exists('json/groups.json'))
+	{
+		$groups = file_get_contents('data/groups.json');
+		file_put_contents('json/groups.json', $groups);
+		echo "Json groups created\n";
 	}
 ?>

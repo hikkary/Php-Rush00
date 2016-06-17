@@ -15,6 +15,55 @@ function cpseudo($pseudo, $tab)
 	}
 }
 
+function cgroup($grp, $tab)
+{
+	foreach ($tab as $groupe)
+	{
+		if($groupe['pseudo'] === $grp)
+		{
+			echo "That Group already exist"."<br/>";
+			redirect('create_groups.php');
+			exit();
+		}
+	}
+}
+function auth($pseudo, $passwd , $tab)
+{
+	foreach ($tab as $elem)
+	{
+		if ($elem['pseudo'] === $pseudo && $elem['pwd'] === $passwd)
+			return (1);
+
+	}
+	return (-1);
+}
+
+// function cpseudo2($pseudo, $passwd, $tab)
+// {
+// 	$verif = 0;
+// 	$vpwd = 0;
+// 	foreach ($tab as $name)
+// 	{
+// 		if($name['pseudo'] === $pseudo)
+// 		{
+// 			$verif = 1;
+// 		}
+// 	}
+// 	foreach ($tab as $pwd)
+// 	{
+// 		if($pwd['pwd'] === $passwd)
+// 		{
+// 			$vpwd = 1;
+// 		}
+// 	}
+// 	if ($verif !== 1 || $vpwd !== 1)
+// 	{
+// 		echo "Incorrect informations"."<br/>";
+// 		redirect('connexion.php');
+// 			exit();
+// 	}
+// }
+
 function cemail($email, $tab)
 {
 	foreach ($tab as $name)

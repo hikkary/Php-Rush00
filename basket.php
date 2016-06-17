@@ -42,6 +42,7 @@
 		if ($_POST['Validate'] === "on")
 		{
 			unset($_SESSION['valid']);
+			unset($valid);
 			unset($_SESSION['tab']);
 			unset($_SESSION['qty']);
 			redirect('basket.php');

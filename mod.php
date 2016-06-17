@@ -47,9 +47,9 @@ echo "			<input type='number' name='price' value='{$p[price]}' placeholder='Pric
 echo '			    <label for="type">Select Types :</label><br />
 					  <input type="checkbox" name="None">None</input>
 					  <input type="checkbox" name="Fire">Fire</input>
-					  <input type="checkbox" name="Plant">Plant</input>
+					  <input type="checkbox" name="Plant">Plant</input>'
 					  <input type="checkbox" name="Water">Water</input>
-					  <input type="checkbox" name="Rock">Rock</input>
+echo'					  <input type="checkbox" name="Rock">Rock</input>
 					  <input type="checkbox" name="Poison">Poison</input>
 				</select>
 				<br/>
