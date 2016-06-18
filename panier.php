@@ -20,9 +20,22 @@ session_start();
 				$rootname = getcwd();
 				require_once($rootname."/check_sign_in.php");
 				require_once($rootname."/redirect.php");
-				$stock = array("");
-				// $tmp = array("");
+				$order = file_get_contents('json/orders.json');
+				if($order)
+				{
+					$stock = array("");
+					$order = file_get_contents('json/orders.json');
+					$order = json_decode($order, true);
+					foreach ($order as $key => $value) {
 
+						if($key === $_SESSION['pseudo'])
+						{
+
+							echo "votre commande est en cours de traitement";
+							exit();
+						}
+					}
+				}
 					if (!$_SESSION['tab'])
 					{
 						echo "Le panier est vide"."<br>";
@@ -33,8 +46,12 @@ session_start();
 						$_SESSION['total'] = 0;
 						foreach (array_combine($_SESSION['tab'], $_SESSION['qty']) as $poke => $qty )
 						{
-			 				echo $poke." ".$qty." ".cprice($poke) * $qty."$"."<br>";
-			 				$tmp =  $poke." ".$qty." ".cprice($poke) * $qty."$"."<br>";
+			 				if($poke)
+			 				{
+				 				echo $poke." "."x".$qty." ".cprice($poke) * $qty."$"."<br>";
+			 					$tmp =  $poke." ".$qty." ".cprice($poke) * $qty."$"."<br>";
+			 				}
+
 			 				$_SESSION['total'] += cprice($poke) * $qty;
 			 				$stock[$i] = $tmp;
 			 				$i++;
@@ -65,8 +82,13 @@ session_start();
 
 		if ($_POST['Validate'] === "on")
 		{
-			$_SESSION['valid'] = $stock;
+			$order = file_get_contents('json/orders.json');
+			$order = json_decode($order, true);
+			$order[$_SESSION[pseudo]] = $stock;
+			$order = json_encode($order);
+			$order = file_put_contents('json/orders.json', $order);
 			unset($stock);
+			redirect('panier.php');
 		}
 		if ($_POST['Supress'] === "on")
 		{

@@ -2,7 +2,7 @@
 function tmenu()
 {
 	$rootname = getcwd();
-	$m = file_get_contents($rootname.'/nav/menu.html');
+	$m = file_get_contents($rootname.'/nav/tmenu.php');
 	echo $m;
 }
 

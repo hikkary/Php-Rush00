@@ -17,19 +17,26 @@
 	<div id="forme">
 		<h1>Commande en attente de validation</h1>
 		<?php
-
-			if (!$_SESSION['valid'])
+			$order = file_get_contents('json/orders.json');
+			$order = json_decode($order, true);
+			if (!$order)
 			{
 				echo "Aucune commande a valider"."<br>";
 			}
 			else
 			{
-				foreach ($_SESSION['valid'] as $p)
+				$i = 0;
+				foreach ($order as $p => $value)
 				{
-					echo $p;
+					echo $p." " ;
+					foreach ($order[$p] as $k)
+					{
+						echo $k;					}
+					echo "<hr>";
+					$i++;
 				}
 			}
-			echo "Cout total :".$_SESSION['total'];
+			// echo "Cout total :".$_SESSION['total'];
 			echo ' <form  action="basket.php" method="post">'."<br>";
 				echo'			<input type="checkbox" name="Validate"> Valider la commande</input>
 							<input type="submit" name="submit" value="OK"/>
@@ -39,6 +46,7 @@
 
 		if ($_POST['Validate'] === "on")
 		{
+			file_put_contents('json/orders.json', NULL);
 			unset($_SESSION['total']);
 			unset($_SESSION['valid']);
 			unset($valid);

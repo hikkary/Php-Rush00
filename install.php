@@ -18,4 +18,10 @@
 		file_put_contents('json/groups.json', $groups);
 		echo "Json groups created\n";
 	}
+	if (!file_exists('json/orders.json'))
+	{
+		$orders = file_get_contents('data/orders.json');
+		file_put_contents('json/orders.json', $orders);
+		echo "Json orders created\n";
+	}
 ?>

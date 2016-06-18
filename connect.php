@@ -23,6 +23,7 @@ if ($_POST["submit"] == "OK")
 	else
 	{
 		echo "incorrect Pseudo or Password";
+		redirect('connexion.php');
 		exit();
 	}
 
