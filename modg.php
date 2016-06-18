@@ -72,25 +72,8 @@
 		<br>'
 	;
 
-echo"			<input type='text' name='name' value='{$p[name]}' placeholder='Name'>";
-echo"				<input type='text' name='newname' value='{$p[name]}' placeholder='New Name'>";
-echo "			<input type='number' name='price' value='{$p[price]}' placeholder='Price'>
-					<br/>";
+echo"			<input type='text' name='name' value='{$p[gname]}' placeholder='Name'>";
 
-echo '			    <label for="type">Select Types :</label><br />
-					  <input type="checkbox" name="None">None</input>
-					  <input type="checkbox" name="Fire">Fire</input>
-					  <input type="checkbox" name="Plant">Plant</input>';
-echo "					  <input type='checkbox' name='Water' checked='{$p[Water]}'>Water</input>";
-echo'					  <input type="checkbox" name="Rock">Rock</input>
-					  <input type="checkbox" name="Poison">Poison</input>
-				</select>
-				<br/>
-					<br/>';
-
-echo "			<input type='url' name='image' value='{$p[image]}' placeholder='url de l'image'>";
-
-echo "				<input type='text' name='description' value='{$p[description]}' placeholder='Describe the product'>";
 echo'			<input type="checkbox" name="Validate"> Valider les modification</input>
 				<input type="checkbox" name="Supress"> Supprimer le produit</input>
 				<input type="submit" name="submit" value="OK"/>

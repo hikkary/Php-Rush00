@@ -13,9 +13,9 @@ if($_POST['ref'] === "" | $_POST['name'] === "" | $_POST['price'] === "" | $_POS
 	if(file_exists('json/products.json'))
 	{
 		$new_product =  array(
-				'group' => array_merge ((array)$_POST[group]),
+				'group' => $_POST[group],
 
-			'ref' => $_POST[ref] , 'name' => $_POST[name],'price' => $_POST[price], 'image' => $_POST[image], 'None' => $_POST[None], 'Fire' => $_POST[Fire],'Plant' => $_POST[Plant],'Water' => $_POST[Water],
+			'name' => $_POST[name],'price' => $_POST[price], 'image' => $_POST[image], 'None' => $_POST[None], 'Fire' => $_POST[Fire],'Plant' => $_POST[Plant],'Water' => $_POST[Water],
 		'Rock' => $_POST[Rock],'Poison' => $_POST[Poison], 'description' => $_POST[description]);
 		$u = file_get_contents('json/products.json');
 		$u = json_decode($u, true);

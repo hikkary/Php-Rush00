@@ -15,6 +15,19 @@ function cpseudo($pseudo, $tab)
 	}
 }
 
+function caddgroup($grp, $tab)
+{
+	foreach ($tab as $groupe)
+	{
+		if($groupe === $grp)
+		{
+			echo "The Pokemon is in this Group already "."<br/>";
+			redirect('mod_products.php');
+			exit();
+		}
+	}
+}
+
 function cgroup($grp, $tab)
 {
 	foreach ($tab as $groupe)
@@ -27,6 +40,8 @@ function cgroup($grp, $tab)
 		}
 	}
 }
+
+
 function auth($pseudo, $passwd , $tab)
 {
 	foreach ($tab as $elem)
