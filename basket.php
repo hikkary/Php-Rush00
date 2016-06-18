@@ -20,7 +20,7 @@
 
 			if (!$_SESSION['valid'])
 			{
-				echo "Aucune commande a valider";
+				echo "Aucune commande a valider"."<br>";
 			}
 			else
 			{
@@ -29,30 +29,23 @@
 					echo $p;
 				}
 			}
+			echo "Cout total :".$_SESSION['total'];
 			echo ' <form  action="basket.php" method="post">'."<br>";
 				echo'			<input type="checkbox" name="Validate"> Valider la commande</input>
 							<input type="submit" name="submit" value="OK"/>
 						</form>
 					</div>
 				</div>';
-				// unset($stock[0]);
-				// unset($stock[1]);
-				// unset($stock[2]);
 
 		if ($_POST['Validate'] === "on")
 		{
+			unset($_SESSION['total']);
 			unset($_SESSION['valid']);
 			unset($valid);
 			unset($_SESSION['tab']);
 			unset($_SESSION['qty']);
 			redirect('basket.php');
 		}
-		// if ($_POST['Supress'] === "on")
-		// {
-		// 	unset($_SESSION['tab']);
-		// 	unset($_SESSION['qty']);
-		// 	redirect('panier.php');
-		// }
 		?>
 	</div>
 </div>

@@ -15,8 +15,8 @@ session_start();
 ?>
 <?php echo "bonjour ".$_SESSION['pseudo']."<br>"?>
 <form action="boutique.php" method="post">
-<label for="group">Selectionner le groupe a afficher :</label><br />
-<SELECT  name="group" size="1">
+<label for="group">Selectionner la categorie a afficher :</label><br />
+<SELECT  name="group" size="10">
 	<?php
 			$g = file_get_contents('json/groups.json');
 			$g = json_decode($g, true);
@@ -25,8 +25,6 @@ session_start();
 				echo "<option>";
 				print($group[gname]);
 			}
-
-
 	?>
 	<input type="submit" name="submit" value="OK"/>
 </form>

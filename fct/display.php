@@ -22,6 +22,8 @@ function last3()
 
 function group($group)
 {
+	if(!$group)
+		$group = "Pokemon";
 	$p = file_get_contents('json/products.json');
 			$p = json_decode($p, true);
 

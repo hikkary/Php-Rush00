@@ -30,17 +30,27 @@ session_start();
 					else
 					{
 						$i = 0;
+						$_SESSION['total'] = 0;
 						foreach (array_combine($_SESSION['tab'], $_SESSION['qty']) as $poke => $qty )
 						{
 			 				echo $poke." ".$qty." ".cprice($poke) * $qty."$"."<br>";
 			 				$tmp =  $poke." ".$qty." ".cprice($poke) * $qty."$"."<br>";
+			 				$_SESSION['total'] += cprice($poke) * $qty;
 			 				$stock[$i] = $tmp;
 			 				$i++;
 			 			}
 			 		}
+			 		$total = $_SESSION[total];
+			 		echo "<br>"."Cout total  ".$total."$"."<br>";
 			 	if ($_SESSION['pseudo'] == "")
 				{
-					echo "Vous devez vous connecter pour valider votre commande";
+					echo "Vous devez vous connecter pour valider votre commande"."<br>";
+					echo ' <form  action="panier.php" method="post">'."<br>";
+					echo'	<input type="checkbox" name="Supress"> Supprimer le panier</input>
+							<input type="submit" name="submit" value="OK"/>
+							</form>
+						</div>
+					</div>';
 				}
 				else
 				{
@@ -53,7 +63,6 @@ session_start();
 					</div>';
 				}
 
-
 		if ($_POST['Validate'] === "on")
 		{
 			$_SESSION['valid'] = $stock;
@@ -61,6 +70,7 @@ session_start();
 		}
 		if ($_POST['Supress'] === "on")
 		{
+			unset($_SESSION['total']);
 			unset($_SESSION['tab']);
 			unset($_SESSION['qty']);
 			unset($stock);
