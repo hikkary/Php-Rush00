@@ -14,15 +14,13 @@
 	<div id="forme">
 
 	<form action="modg.php" method="post">
-	<label for="name">Select The product to modify :</label><br />
-	<SELECT  name="group" size="1">
+	<label for="name">Select The Group to modify :</label><br />
+	<SELECT  name="gname" size="1">
 	<?php
 			$g = file_get_contents('json/groups.json');
 			$g = json_decode($g, true);
-			// $g = array_reverse($p);
 			foreach ($g as $group)
 			{
-				// print_r($group);
 				echo "<option>";
 				print($group[gname]);
 			}

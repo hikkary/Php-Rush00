@@ -15,6 +15,7 @@
 		<div id="dep">
 			<form action="g_create.php" method="post">
 				<input type="text" name="gname" placeholder="Group Name">
+				<input type="submit" name="submit" value="OK"/>
 			</form>
 		</div>
 	</div>

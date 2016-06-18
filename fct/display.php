@@ -5,15 +5,40 @@ function last3()
 	$p = file_get_contents('json/products.json');
 			$p = json_decode($p, true);
 			$p = array_reverse($p);
-			$p = array_chunk($p, 3);
+			$p = array_chunk($p, 2);
 			foreach ($p[0] as $product)
 			{
-				echo "<img src='{$product['image']}'/>";
-				print($product['name']." &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ".$product['price']."$");
+				echo "<img src='{$product['image']}'/>" ."<br>";
+				echo($product['name']."<br>");
+				echo($product['price']."$"."<br>"."<br>");
 				echo ' <form  action="add_panier.php" method="post">'."<br>";
 				echo '<input type="number" name="qty" value="1">';
-			echo"<input type='submit' name='ajout' value='{$product[name]}' placeholder='Name'>";
+			echo"<input type='submit' name='ajout' value='{$product[name]}' placeholder='Name'>"."<br>";
+			echo($product['description']."<br>");
 			echo ' </form>';
+			}
+}
+
+
+function group($group)
+{
+	$p = file_get_contents('json/products.json');
+			$p = json_decode($p, true);
+
+			foreach ($p as $product)
+			{
+				if((stripos($product['group'],$group)) !== FALSE )
+				{
+					echo "<img src='{$product['image']}'/>" ."<br>";
+					echo($product['name']."<br>");
+					echo($product['price']."$"."<br>"."<br>");
+					echo ' <form  action="add_panier.php" method="post">'."<br>";
+					echo '<input type="number" name="qty" value="1">';
+				echo"<input type='submit' name='ajout' value='{$product[name]}' placeholder='Name'>"."<br>";
+				echo($product['description']."<br>");
+				echo ' </form>';
+				echo ' <hr>';
+			}
 			}
 }
 

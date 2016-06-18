@@ -99,14 +99,26 @@ height: 900px;
 }
 
 .affichage{
-	/* position: relative; */
-	display: flex;
+	display: inline-flex;
 	width: 100px;
 	height: 200px;
 }
 
 
+.achat{
+	width: 800px;
+	height: 100%;
 
+	background-color: #7CD8E4;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 0 12px #999;
+}
+
+
+.affichage2{
+	margin-left: 40%;
+}
 
 
 
