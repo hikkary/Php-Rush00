@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/products.css"/>
-	<title>Poke-Shop</title>
+	<title>Poké-Shop</title>
 </head>
 <body>
 <?php
@@ -24,7 +24,6 @@
 
 			foreach ($u as $user)
 			{
-				//echo "<img src='{$user['image']}'/>";
 				echo "<option>";
 				print($user['gname']);
 			}

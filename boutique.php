@@ -5,7 +5,7 @@ session_start();
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/boutique.css"/>
-	<title>Poke-Shop</title>
+	<title>Poké-Shop</title>
 </head>
 <body>
 <?php
@@ -15,7 +15,7 @@ session_start();
 ?>
 <?php echo "bonjour ".$_SESSION['pseudo']."<br>"?>
 <form action="boutique.php" method="post">
-<label for="group">Selectionner la categorie a afficher :</label><br />
+<label for="group">Sélectionner la categorie à afficher :</label><br />
 <SELECT  name="group" size="10">
 	<?php
 			$g = file_get_contents('json/groups.json');
@@ -30,7 +30,7 @@ session_start();
 </form>
 <div class="poketop">
 	<a href="pokemon.php">
-		<h1 class="poketitre">Nos Derniers Pokemon</h1>
+		<h1 class="poketitre">Nos Derniers Pokémons</h1>
 	</a>
 		<div class="affichage">
 		<?php

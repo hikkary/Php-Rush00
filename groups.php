@@ -11,10 +11,10 @@
   	amenu();
 ?>
 	<div id="forme">
-		<h1>Gestion des categories</h1>
-<a href="create_groups.php"> Creer une Categorie</a>
+		<h1>Gestion des catégories</h1>
+<a href="create_groups.php"> Créer une Catégorie</a>
 <br>
-<a href="mod_groups.php"> Modifier Categorie</a>
+<a href="mod_groups.php"> Modifier une Catégorie</a>
 <br>
 		<?php
 			$groups = file_get_contents('json/groups.json');

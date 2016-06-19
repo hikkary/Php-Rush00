@@ -9,7 +9,7 @@ if ($_SESSION['pseudo'] === "admin" && $_SESSION['pwd'] === "123456")
 	}
 else
 {
-	echo "Vous n'avez pas acces a cette partie du site";
+	echo "Vous n'avez pas accès à cette partie du site";
 	redirect('index.php');
 }
 ?>

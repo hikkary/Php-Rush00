@@ -26,7 +26,7 @@
 					?>
 			</div>
 		<div id="products">
-			<h1 class="title">Last Product</h1>
+			<h1 class="title">Last Products</h1>
 				<?php
 					$p = file_get_contents('json/products.json');
 					$p = json_decode($p, true);

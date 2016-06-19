@@ -5,7 +5,7 @@ session_start();
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/inscription.css"/>
-	<title>Poke-Shop</title>
+	<title>Poké-Shop</title>
 </head>
 <body>
 <?php
@@ -19,7 +19,7 @@ session_start();
 	<?php
 	  	if ($_SESSION['pseudo'])
   	{
-  		echo "<br>"."Veuillez vous deconnecter";
+  		echo "<br>"."Veuillez vous déconnecter";
   		redirect('index.php');
   		exit();
   	}?>

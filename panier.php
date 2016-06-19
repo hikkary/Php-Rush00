@@ -5,7 +5,7 @@ session_start();
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/panier.css"/>
-	<title>Poke-Shop</title>
+	<title>Poké-Shop</title>
 </head>
 <body>
 <?php
@@ -31,7 +31,7 @@ session_start();
 						if($key === $_SESSION['pseudo'])
 						{
 
-							echo "votre commande est en cours de traitement";
+							echo "Votre commande est en cours de traitement";
 							exit();
 						}
 					}
@@ -48,8 +48,8 @@ session_start();
 						{
 			 				if($poke)
 			 				{
-				 				echo $poke." "."x".$qty." ".cprice($poke) * $qty."$"."<br>";
-			 					$tmp =  $poke." ".$qty." ".cprice($poke) * $qty."$"."<br>";
+				 				echo $poke." ".cprice($poke)."$ "."x".$qty." "."= ".cprice($poke) * $qty."$"."<br>";
+			 					$tmp =  $poke." ".cprice($poke)."$ "."x".$qty." "."= ".cprice($poke) * $qty."$"."<br>";
 			 				}
 
 			 				$_SESSION['total'] += cprice($poke) * $qty;

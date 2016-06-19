@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/inscription.css"/>
-	<title>Poke-Shop</title>
+	<title>Poké-Shop</title>
 </head>
 <body>
 <?php

@@ -6,7 +6,7 @@ session_start();
 
 if ($_POST['pseudo'] === "" || $_POST['pwd'] === "")
 {
-	echo "Veuillez remplir tout les champs"."<br>";
+	echo "Veuillez remplir tous les champs"."<br>";
 	redirect('connexion.php');
 	exit();
 }
@@ -22,7 +22,7 @@ if ($_POST["submit"] == "OK")
 	}
 	else
 	{
-		echo "incorrect Pseudo or Password";
+		echo "Incorrect Pseudo or Password";
 		redirect('connexion.php');
 		exit();
 	}

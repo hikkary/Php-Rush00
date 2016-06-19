@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/products.css"/>
-	<title>Poke-Shop</title>
+	<title>Poké-Shop</title>
 </head>
 <body>
 <?php
@@ -41,7 +41,7 @@ echo "			<input type='password' name='pwd' value='{$u[pwd]}' placeholder='Mot de
 
 
 echo'			<input type="checkbox" name="Validate"> Valider les modification</input>
-				<input type="checkbox" name="Supress"> Supprimer le produit</input>
+				<input type="checkbox" name="Supress"> Supprimer l\'utilisateur</input>
 				<input type="submit" name="submit" value="OK"/>
 			</form>
 		</div>

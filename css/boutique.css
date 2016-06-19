@@ -14,7 +14,6 @@ background-image: url('http://e08595.medialib.glogster.com/media/04/0463cfaf4ce3
 #tmenu{
 	height: 55px;
 	width: auto;
-	/*border: 1px solid black;*/
 	background-color: #009AE3;
 	box-shadow: 0 0 12px #999;
 }
@@ -38,7 +37,6 @@ background-image: url('http://e08595.medialib.glogster.com/media/04/0463cfaf4ce3
 
 #tmenu li.bout_g{
 	display: block;
-	/*margin: 1px;*/
 	float: left;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -120,30 +118,4 @@ height: 900px;
 	margin-left: 40%;
 	margin-top: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

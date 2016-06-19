@@ -5,7 +5,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/admin.css"/>
-	<title>Poke-Shop</title>
+	<title>Poké-Shop</title>
 </head>
 <body>
 <?php
@@ -21,7 +21,7 @@
 			$order = json_decode($order, true);
 			if (!$order)
 			{
-				echo "Aucune commande a valider"."<br>";
+				echo "Aucune commande à valider"."<br>";
 			}
 			else
 			{
@@ -37,7 +37,7 @@
 				}
 			}
 			echo ' <form  action="basket.php" method="post">'."<br>";
-				echo'			<input type="checkbox" name="Validate"> Valider la commande</input>
+				echo'			<input type="checkbox" name="Validate">Valider la commande</input>
 							<input type="submit" name="submit" value="OK"/>
 						</form>
 					</div>

@@ -5,7 +5,7 @@ session_start();
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/pokemon.css"/>
-	<title>Poke-Shop</title>
+	<title>Poké-Shop</title>
 </head>
 <body>
 <?php
@@ -16,7 +16,7 @@ session_start();
 <?php echo "bonjour ".$_SESSION['pseudo']?>
 <div class="poketop">
 	<a href="#">
-		<h1 class="poketitre">Nos Derniers Pokemon</h1>
+		<h1 class="poketitre">Nos Derniers Pokémons</h1>
 	</a>
 		<div class="affichage">
 		<?php
@@ -29,7 +29,7 @@ session_start();
 
 <div class="poketop">
 	<a href="#">
-		<h1 class="poketitre">Nos Derniers Pokemon Eau</h1>
+		<h1 class="poketitre">Nos Derniers Pokémons Eau</h1>
 	</a>
 		<div class="affichage">
 		<?php
@@ -42,7 +42,7 @@ session_start();
 
 <div class="poketop">
 	<a href="#">
-		<h1 class="poketitre">Nos Derniers Pokemon Plante</h1>
+		<h1 class="poketitre">Nos Derniers Pokémons Plante</h1>
 	</a>
 		<div class="affichage">
 		<?php
@@ -55,7 +55,7 @@ session_start();
 
 <div class="poketop">
 	<a href="#">
-		<h1 class="poketitre">Nos Derniers Pokemon Pierre</h1>
+		<h1 class="poketitre">Nos Derniers Pokémons Pierre</h1>
 	</a>
 		<div class="affichage">
 		<?php
@@ -68,7 +68,7 @@ session_start();
 
 <div class="poketop">
 	<a href="#">
-		<h1 class="poketitre">Nos Derniers Pokemon Poison</h1>
+		<h1 class="poketitre">Nos Derniers Pokémons Poison</h1>
 	</a>
 		<div class="affichage">
 		<?php
@@ -81,7 +81,7 @@ session_start();
 
 <div class="poketop">
 	<a href="#">
-		<h1 class="poketitre">Nos Derniers Pokemon Legendaire</h1>
+		<h1 class="poketitre">Nos Derniers Pokémons Légendaires</h1>
 	</a>
 		<div class="affichage">
 		<?php

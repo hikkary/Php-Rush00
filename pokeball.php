@@ -3,7 +3,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/pokeball.css"/>
-	<title>Poke-Shop</title>
+	<title>Poké-Shop</title>
 </head>
 <body>
 <?php
@@ -13,7 +13,7 @@
 ?>
 <div class="poketop">
 	<a href="#">
-		<h1 class="poketitre">Nos Dernieres Pokeball</h1>
+		<h1 class="poketitre">Nos Dernières Pokéballs</h1>
 	</a>
 		<div class="affichage">
 		<?php

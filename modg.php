@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/products.css"/>
-	<title>Poke-Shop</title>
+	<title>Poké-Shop</title>
 </head>
 <body>
 <?php
@@ -28,7 +28,7 @@ echo'	<div id="forme">
 echo "			<input type='text' name='gname' value='{$g[gname]}' placeholder='Pseudo'>";
 echo "			<input type='text' name='newgname' value='{$g[gname]}' placeholder='Pseudo'>";
 
-echo'			<input type="checkbox" name="Validate"> Valider les modification</input>
+echo'			<input type="checkbox" name="Validate"> Valider les modifications</input>
 				<input type="checkbox" name="Supress"> Supprimer le produit</input>
 				<input type="submit" name="submit" value="OK"/>
 			</form>
@@ -42,19 +42,22 @@ echo'			<input type="checkbox" name="Validate"> Valider les modification</input>
 if ($_POST['Validate'] === "on")
 {
 
-$group = file_get_contents('json/products.json');
+$group = file_get_contents('json/groups.json');
 $group = json_decode($group, true);
 
 foreach ($group as $g => $value)
 	{
-		if ($_POST['newgname'] !== NULL)
+		if($group[$g]['gname'] === $_POST['gname'])
+		{
+			if ($_POST['newgname'] !== NULL)
 			{
 					$group[$g]['gname'] = $_POST['newgname'];
 			}
+		}
 	}
 
-	$products = json_encode($group);
-file_put_contents('json/groups.json', $products);
+	$group = json_encode($group);
+	file_put_contents('json/groups.json', $group);
 	redirect('mod_groups.php');
 }
 

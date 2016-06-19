@@ -5,7 +5,7 @@ session_start();
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/index.css"/>
-	<title>Poke-Shop</title>
+	<title>Poké-Shop</title>
 </head>
 <body>
 <?php
@@ -18,7 +18,14 @@ session_start();
 		<img src="img/pokeshop.png"/>
 	</div>
 <div id="poketop">
-	<h1 id="poketitre">Nos Derniers Pokemon</h1>
+	<h1 id="poketitre">Nos Derniers Pokémons</h1>
+	<div class="affichage">
+		<?php
+			$rootname = getcwd();
+			require_once($rootname.'/fct/display.php');
+			last3();
+		?>
+		</div>
 </div>
 <div id="">
 

@@ -5,7 +5,7 @@ require_once($rootname.'/check_sign_in.php');
 
 if($_POST['ref'] === "" | $_POST['name'] === "" | $_POST['price'] === "" | $_POST['image'] === "" | $_POST['description'] === "")
 	{
-		$error = "Veuillez remplir tout les champs";
+		$error = "Veuillez remplir tous les champs";
 		echo '<script type="text/javascript">window.alert("'.$error.'");</script>';
 		redirect(products.php);
 		exit();
