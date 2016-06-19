@@ -36,7 +36,6 @@
 					$i++;
 				}
 			}
-			// echo "Cout total :".$_SESSION['total'];
 			echo ' <form  action="basket.php" method="post">'."<br>";
 				echo'			<input type="checkbox" name="Validate"> Valider la commande</input>
 							<input type="submit" name="submit" value="OK"/>

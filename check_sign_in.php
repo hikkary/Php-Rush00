@@ -53,31 +53,6 @@ function auth($pseudo, $passwd , $tab)
 	return (-1);
 }
 
-// function cpseudo2($pseudo, $passwd, $tab)
-// {
-// 	$verif = 0;
-// 	$vpwd = 0;
-// 	foreach ($tab as $name)
-// 	{
-// 		if($name['pseudo'] === $pseudo)
-// 		{
-// 			$verif = 1;
-// 		}
-// 	}
-// 	foreach ($tab as $pwd)
-// 	{
-// 		if($pwd['pwd'] === $passwd)
-// 		{
-// 			$vpwd = 1;
-// 		}
-// 	}
-// 	if ($verif !== 1 || $vpwd !== 1)
-// 	{
-// 		echo "Incorrect informations"."<br/>";
-// 		redirect('connexion.php');
-// 			exit();
-// 	}
-// }
 
 function cemail($email, $tab)
 {
